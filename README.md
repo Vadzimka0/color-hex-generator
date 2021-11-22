@@ -44,3 +44,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+#### Values JS
+
+[values.js](https://github.com/noeldelgado/values.js)
+[yarn add values.js] (https://classic.yarnpkg.com/en/package/values.js)
