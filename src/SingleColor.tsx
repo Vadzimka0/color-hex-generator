@@ -1,35 +1,31 @@
 import React, {useEffect, useState} from 'react'
-import rgbToHex from './utils'
 
 export type SingleColorType = {
   rgb: Array<number>
   weight: string
-  index: number
   hexColor: string
+  type: string
 }
 
-const SingleColor = ({rgb, weight, index, hexColor}: SingleColorType) => {
+const SingleColor = ({rgb, weight, hexColor, type}: SingleColorType) => {
   const [alert, setAlert] = useState(false)
   const bcg = rgb.join(',')
-  // const hex = rgbToHex(...rgb)
   const hexValue = `#${hexColor}`
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAlert(false)
-    }, 2000)
+    }, 500)
     return () => clearTimeout(timeout)
   }, [alert])
 
   return (
     <article
-      className={`color ${index > 10 && 'color-light'}`}
+      className={`color ${type === 'shade' && 'color-light'}`}
       style={{backgroundColor: `rgb(${bcg})`}}
       onClick={() => {
         setAlert(true)
-        console.log(navigator)
         navigator.clipboard.writeText(hexValue)
-
       }}
     >
       <p className="percent-value">{weight}%</p>

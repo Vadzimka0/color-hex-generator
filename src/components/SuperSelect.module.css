@@ -1,0 +1,28 @@
+:root {
+  --b-width: 2px;
+  --b-color: #e8e8e8;
+}
+
+.select {
+  margin: 5px 0;
+  width: 100px;
+  padding: 6px 12px;
+  border-width: var(--b-width);
+  border-color: var(--b-color);
+  border-radius: 8px;
+  color: #5d5d5d;
+  font-size: 14px;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.option {
+  color: #5d5d5d;
+}
+
+.option:checked {
+  font-weight: bold;
+  background-color: #e8e8e8;
+}
